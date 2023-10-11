@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sdos_todo/app/screens/create.dart';
+import 'package:sdos_todo/app/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter is awesome!'),
+      home: const HomePage(),
+      routes: {
+        '/add': (context) => const CreateTodoPage(),
+      }
     );
   }
 }
